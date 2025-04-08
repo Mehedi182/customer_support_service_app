@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn --bind 0.0.0.0:8000 Main.wsgi:application"
+    environment:
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_PASSWORD=admin123
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+    volumes:
+      - .:/app
+      # - /app/db.sqlite3  # Persist SQLite database
+    ports:
+      - "8000:8000"
+    entrypoint: /app/entrypoint.sh
