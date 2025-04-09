@@ -12,5 +12,5 @@ services:
       - .:/app
       # - /app/db.sqlite3  # Persist SQLite database
     ports:
-      - "8000:8000"
+      - "80:8000"
     entrypoint: /app/entrypoint.sh
