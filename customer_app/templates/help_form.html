@@ -100,14 +100,17 @@
         color: #374151;
       }
     </style> -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
   </head>
   <body>
     <div class="container">
       <h1>Customer Support Request</h1>
       <hr />
-      <form method="POST">
+      <form method="POST" id="support-form">
         {% csrf_token %}
 
         <div class="form-group">
@@ -136,6 +139,5 @@
       <p class="footer-note">We usually respond within 24 hours.</p>
     </div>
     <script src="{% static 'js/form_validation.js' %}"></script>
-
   </body>
 </html>

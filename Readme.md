@@ -60,5 +60,6 @@ To run the application using Docker:
     docker-compose down
     ```
 ### Live Application
-
 The application is live and accessible at: [http://172.187.178.63/](http://172.187.178.63/)
+
+The admin panel can be accessed at: [http://172.187.178.63/admin](http://172.187.178.63/admin)
