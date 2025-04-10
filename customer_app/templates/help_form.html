@@ -1,9 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>Help Request Form</title>
-    <style>
+    <!-- <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #f8fafc;
@@ -97,7 +99,9 @@
         margin-bottom: 6px;
         color: #374151;
       }
-    </style>
+    </style> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
   </head>
   <body>
     <div class="container">
@@ -131,5 +135,7 @@
 
       <p class="footer-note">We usually respond within 24 hours.</p>
     </div>
+    <script src="{% static 'js/form_validation.js' %}"></script>
+
   </body>
 </html>
